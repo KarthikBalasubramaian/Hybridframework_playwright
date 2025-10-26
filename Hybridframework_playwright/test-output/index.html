@@ -2,12 +2,10 @@
 
 <html>
   <head>
-  <meta charset='utf-8'>
-  <title>TestNG reports</title>
+  <title>TestNG new reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,9 +19,9 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -50,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\dell\git\Hybridframework_playwright\Hybridframework_playwright\src\test\resource\testrunner\testng.xml</span>
+                    <span>C:\Users\dell\Documents\Playwright\Hybridframework_playwright\Hybridframework_playwright\src\test\resource\testrunner\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,6 +107,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.freecrm.tests.LoginPageTest" class="method navigator-link" hash-for-method="VerifyLoginPageUrl">VerifyLoginPageUrl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.freecrm.tests.LoginPageTest" class="method navigator-link" hash-for-method="VerifySuccessfulLogin">VerifySuccessfulLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -143,19 +146,26 @@
                   <span class="method-name">VerifyLoginPageUrl</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifySuccessfulLogin">
+                  </a> <!-- VerifySuccessfulLogin -->
+                  <span class="method-name">VerifySuccessfulLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\dell\git\Hybridframework_playwright\Hybridframework_playwright\src\test\resource\testrunner\testng.xml</span>
+            <span class="header-content">C:\Users\dell\Documents\Playwright\Hybridframework_playwright\Hybridframework_playwright\src\test\resource\testrunner\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;true&quot; name=&quot;Suite&quot; verbose=&quot;2&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; preserve-order=&quot;true&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.freecrm.tests.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
@@ -197,20 +207,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyLoginPageTitle')
+data.setCell(0, 1, 'VerifySuccessfulLogin')
 data.setCell(0, 2, 'com.qa.freecrm.tests.LoginPageTest')
-data.setCell(0, 3, 48);
+data.setCell(0, 3, 2978);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifyLoginPageUrl')
+data.setCell(1, 1, 'VerifyLoginPageTitle')
 data.setCell(1, 2, 'com.qa.freecrm.tests.LoginPageTest')
-data.setCell(1, 3, 5);
+data.setCell(1, 3, 55);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'VerifyLoginPageUrl')
+data.setCell(2, 2, 'com.qa.freecrm.tests.LoginPageTest')
+data.setCell(2, 3, 35);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 53 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -243,20 +257,23 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">VerifyLoginPageTitle</span>
-                <span class="method-start">15430 ms</span>
+                <span class="method-start">13533 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VerifyLoginPageUrl</span>
-                <span class="method-start">15489 ms</span>
+                <span class="method-start">13541 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VerifySuccessfulLogin</span>
+                <span class="method-start">13542 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">Teardown</span>
-                <span class="method-start">15499 ms</span>
+                <span class="method-start">16523 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

@@ -6,6 +6,8 @@
       <class name="com.qa.freecrm.tests.LoginPageTest">
         <methods>
           <include name="VerifyLoginPageUrl"/>
+          <include name="VerifySuccessfulLogin"/>
+          <include name="VerifyLoginPageTitle"/>
           <include name="Teardown"/>
           <include name="Setup"/>
         </methods>

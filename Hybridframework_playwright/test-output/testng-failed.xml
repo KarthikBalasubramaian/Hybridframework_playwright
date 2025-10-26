@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <test thread-count="2" parallel="methods" name="Test(failed)" verbose="2">
     <classes>
       <class name="com.qa.freecrm.tests.LoginPageTest">
         <methods>
           <include name="VerifyLoginPageUrl"/>
+          <include name="VerifySuccessfulLogin"/>
           <include name="VerifyLoginPageTitle"/>
           <include name="Teardown"/>
           <include name="Setup"/>
